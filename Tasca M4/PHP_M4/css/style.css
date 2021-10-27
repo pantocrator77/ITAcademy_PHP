@@ -1,9 +1,15 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 }
-.navbar-brand{
-	color: #444444;
+h1{
+	background-color: #eeeeee;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
 .btn-secondary {
 	background-color: #ffffff;
+}
+.main{
+	margin: 5%;
 }

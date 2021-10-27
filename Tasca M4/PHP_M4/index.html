@@ -11,66 +11,121 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-	<style type="text/css">
-		
-		.border1{
-			background-color: green;
-			height: 100%;
-		}
-		.border2{
-			background-color: red;
-			height: 100%;
-		}
-		.border3{
-			background-color: blue;
-			height: 100%;
-		}
-	</style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-md navbar-light">
-<div class="container">	
-  <a class="navbar-brand" href="#">LOGO</a>
-  <button 
-  	class="navbar-toggler" 
-  	type="button" 
-  	data-bs-toggle="collapse" 
-  	data-bs-target="ToggleMobileMenu"
-  	 aria-controls="ToggleMobileMenu" 
-  	 aria-expanded="false" 
-  	 aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ms-auto">
-      <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Home
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-	</div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ms-auto">
-      <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Portfolio
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-	</div>
-    
-    </ul>
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo.png" alt="" width="167" height="70" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cursos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Archivos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Precios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
   </div>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Entra
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+         <img src="img/logo.png" alt="" width="167" height="70" class="d-inline-block align-text-top">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        	<div class="input-group mb-3">
+  						<input type="text" class="form-control" placeholder="Aqui tu nombre de usuario" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  						<span class="input-group-text" id="basic-addon2">Usuario</span>
+					</div>
+					<div class="input-group mb-3">
+  						<input type="text" class="form-control" placeholder="Aqui tu password" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  						<span class="input-group-text" id="basic-addon2">Password</span>
+					</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Entra</button>
+      </div>
+    </div>
+  </div>
+</div>
 </nav>
 </div>
+</div>
+
+<!-- carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/slide_1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/slide_2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/slide_3.jpg" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="img/slide_4.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Texto -->
+<h1 class="display-1">Cursos para pilotos de drones y rpas</h1>
+<br>
+<content>
+	<div class="main">
+	<div class="row">
+		<div class="col-8">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at risus porttitor, elementum ipsum vel, aliquam justo. Praesent malesuada non lacus id luctus. Integer egestas, nibh nec iaculis bibendum, lectus nulla imperdiet ligula, eget varius nulla tortor vel sapien. Aliquam pellentesque orci eu sapien sollicitudin volutpat. Curabitur pharetra volutpat sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ante tortor, congue sit amet scelerisque id, iaculis nec dolor. Aliquam diam elit, vehicula non urna at, pellentesque aliquam quam. Curabitur quis tellus at sem condimentum ultrices non quis erat.
+
+Aenean erat est, viverra in erat convallis, porta venenatis ipsum. Pellentesque dignissim nibh eget ex facilisis, sit amet ullamcorper ipsum commodo. Donec aliquet dolor sit amet porta auctor. Ut vitae tortor tristique, consectetur enim eu, malesuada ligula. Suspendisse scelerisque interdum ex sed facilisis. Nam sollicitudin at eros ac dapibus. Fusce lacinia lectus pharetra sodales viverra. Vivamus blandit tincidunt neque sed aliquet. Sed eu dictum nibh. Vivamus consectetur neque leo, in lacinia lorem tincidunt vel. Morbi vel dui velit. Donec at condimentum elit. Duis nisl velit, volutpat sed suscipit a, consequat sit amet massa. Nullam eget commodo mi, vel elementum ligula. Quisque quis urna dui.
+</div>
+<div class="col-4">
+	<b>
+Pellentesque volutpat, odio ut pharetra luctus, justo sem laoreet metus, a porttitor nisi turpis a purus. Proin lacinia, turpis at placerat sollicitudin, risus diam cursus eros, in rutrum nisi quam vel sem. Nulla nec mauris lorem. Nulla in luctus nibh. Aliquam quis ornare lacus, at egestas est. In interdum consequat blandit. Sed fringilla ut nisi in rutrum. Integer eget orci risus. Vivamus condimentum tortor dui, ac posuere velit tincidunt quis. Nam bibendum orci a lectus euismod luctus.
+</b>
+</div>
+</div>
+</content>
 <!-- ionic icons-->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
