@@ -1,0 +1,37 @@
+db.pedidos.insert(
+    {
+        marca:"Rayban",
+        graduacion_cristal:"3",
+        montura:"pasta",
+        color:"negro",
+        color_cristales:"transparente",
+        precio:"120", 
+        provedor:{ 
+            nombre:"Gafas Manolo", 
+            calle:"via laietana",
+            numero:"243", 
+            piso:"5",
+            puerta:"2",
+            ciudad:"Barcelona",
+            codigo_postal:"08002",
+            pais:"España",
+            telefono:"933948566",
+            fax:"933454367",
+            NIF:"B3253456"
+        }      
+    }
+)
+db.ventas.insert(
+    {
+        fecha:"12-5-21",
+        vendedor:"Luis",
+        cliente:{
+            nombre:"Antonio Parra", 
+            direccion:"Ausias Marc 79, 2-1",
+            telefono:"934554243", 
+            correo_electronico:"Toniparra@gmail.com",
+            fecha_registro:"4-4-18",
+            cliente_recomendante: "Maria Ramon"
+        }
+   }
+)

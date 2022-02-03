@@ -17,8 +17,11 @@ SELECT nombre, precio FROM producto ORDER BY nombre ASC, precio DESC;
 SELECT * FROM fabricante LIMIT 5;
 SELECT * FROM fabricante WHERE codigo > 3 and codigo < 6;
 SELECT nombre, precio FROM producto ORDER BY precio ASC  LIMIT 1;
+SELECT nombre, precio FROM producto ORDER BY precio DESC  LIMIT 1;
+SELECT producto.nombre, fabricante.codigo FROM producto JOIN fabricante WHERE fabricante.codigo = 2;  
+SELECT producto.nombre, producto.precio, fabricante.nombre FROM producto JOIN fabricante;
 USE universidad;
-SELECT apellido1, apellido2, nombre FROM persona ORDER BY apellido1 ASC, apellido2 ASC, nombre ASC;
+SELECT apellido1, apellido2, nombre FROM persona ORDER BY apellido1 ASC, apellido2 ASC, nombre ASC; 
 SELECT apellido1, apellido2, nombre FROM persona  WHERE telefono IS NULL;
 SELECT  nombre FROM persona WHERE LEFT(fecha_nacimiento, 4) = 1999;
 SELECT nombre, apellido1, apellido2 FROM persona WHERE tipo = "profesor" AND telefono IS NULL  AND RIGHT (nif, 1) = "k";
@@ -36,4 +39,6 @@ SELECT departamento.nombre FROM departamento LEFT JOIN asignatura ON departament
 SELECT COUNT(*) FROM persona WHERE tipo = "alumno";
 SELECT COUNT(*) FROM persona WHERE tipo = "alumno" AND LEFT(fecha_nacimiento, 4) = 1999;
 SELECT departamento.nombre, persona.nombre FROM departamento JOIN profesor ON departamento.id = profesor.id_departamento JOIN persona ON profesor.id_profesor = persona.id WHERE tipo = "profesor" ORDER BY persona.nombre ASC;
-SELECT grado.nombre, COUNT(asignatura.id_grado) FROM grado LEFT JOIN asignatura ON grado.id = asignatura.id_grado GROUP BY grado.nombre, asignatura.id_grado
+SELECT grado.nombre, COUNT(asignatura.id_grado) AS "total asignaturas" FROM grado LEFT JOIN asignatura ON grado.id = asignatura.id_grado GROUP BY grado.nombre, asignatura.id_grado
+SELECT grado.nombre, COUNT(asignatura.id_grado) AS "total asignaturas" FROM grado INNER JOIN asignatura ON grado.id = asignatura.id_grado GROUP BY grado.nombre, asignatura.id_grado HAVING COUNT(asignatura.id_grado) > 40;
+SELECT grado.nombre, asignatura.nombre, SUM(asignatura.creditos) AS "creditos" FROM grado INNER JOIN asignatura GROUP BY grado.nombre, asignatura.nombre;

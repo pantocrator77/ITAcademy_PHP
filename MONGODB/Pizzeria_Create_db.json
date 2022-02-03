@@ -1,0 +1,67 @@
+db.pedidos.insert(
+    {
+        id:"728332",
+        fecha-hora:"12-5-21, 21,30",
+        domicilio:"Gran Via 934, 2-5",
+        cantidad:"5",
+        precio_total:"38", 
+        pizzeria:{ 
+            id:"34", 
+            direccion:"calle bilbao 83",
+            localidad:"Barcelona",
+            provincia:"Barcelona",
+            empleado:{
+                id:"78",
+                nombre:"Julio",
+                apellido:"Martinez",
+                NIF:"346475877Z",
+                telefono:"934534645",
+                cargo:"repartidor"
+            }
+             reparto{
+                nombre_repartidor:"Julio Martinez",
+                fecha-hora:"12-5-21, 22,30",
+
+            }
+        } 
+        Cliente:{
+            id:"4535",
+            nombre:"Joana Lopez",
+            direccion:"Gran Via 934, 2-5",
+            codigo_postal:"08034",
+            telefono:"93534543",
+            provincia:{
+                id:"1",
+                nombre_provincia:"Barcelona"
+            }
+            localidad{
+                id:"1",
+                nombre_provincia:"Barcelona"
+            }
+
+        }
+    }
+)
+db.productos.insert(
+    {
+        categoria:"productos estrella"
+            pizza:{
+                nombre:"napoli",
+                descripción:"base de masa madre, tomate, ajo, oregano",
+                foto:"https://ww.topizzas.com/images/pizzas/napolitana.jpg",
+                precio:"8",
+            }
+             hamburguesa:{
+                nombre:"cheeseburguer",
+                descripción:"doble hamburguesa, tomate, queso, mayonesa y ensalada",
+                foto:"https://ww.topizzas.com/images/hamburguesas/cheeseburguer.jpg",
+                precio:"10",
+            }
+             bebidas:{
+                nombre:"cerveza estrella",
+                descripción:"cerveza en lata",
+                foto:"https://ww.topizzas.com/images/bebidas/lata_estrella.jpg",
+                precio:"2,5",
+            }  
+   }
+)
